@@ -24,7 +24,7 @@ export default function Layout({ children }) {
                       alt="thatJob logo"
                     />
                   </div>
-                  <h1 className="text-white text-3xl font-thin ml-2">thatJob</h1>
+                  <h1 className="text-white text-3xl font-thin ml-2">thatJob.</h1>
                 </div>
                 <div className="hidden md:block">
                   <div className="ml-4 flex items-center md:ml-6">

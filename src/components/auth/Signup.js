@@ -69,12 +69,15 @@ export default function Signup() {
     <div className="min-h-screen flex items-center justify-center bg-gray-900 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
         <div>
-          <h2 className="mt-6 text-center text-3xl font-extrabold text-white">
+        <h2 className="mt-6 mb-0 text-center text-3xl font-extrabold text-white">
+            Welcome to thatJob.
+          </h2>
+          <h2 className="mt-8 text-center text-2xl font-extrabold text-white">
             Create your account
           </h2>
         </div>
         
-        <form className="mt-8 space-y-6" onSubmit={handleSignup}>
+        <form className="mt-4 space-y-6" onSubmit={handleSignup}>
           <div className="rounded-md shadow-sm -space-y-px">
             <div className="grid grid-cols-2 gap-2 mb-2">
               <div>
