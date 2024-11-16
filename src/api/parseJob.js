@@ -1,16 +1,19 @@
 import axios from 'axios';
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
-
 export const parseJobDescription = async (jobDescription) => {
   try {
+    const API_URL = process.env.REACT_APP_API_URL?.replace(/\/+$/, '') || 'http://localhost:5000';
+    
     const response = await axios.post(`${API_URL}/api/claude`, {
       jobDescription: jobDescription
+    }, {
+      headers: {
+        'Content-Type': 'application/json'
+      }
     });
 
     if (response.data && response.data.content && response.data.content[0]) {
       try {
-        console.log("RESPONSE DATA", response.data.content[0]);
         const cleanedText = response.data.content[0].text.replace(/None/g, 'null');
         const parsedData = JSON.parse(cleanedText);
         return {
