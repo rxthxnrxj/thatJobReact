@@ -2,8 +2,8 @@ import axios from 'axios';
 
 export const parseJobDescription = async (jobDescription) => {
   try {
-    const API_URL = process.env.REACT_APP_API_URL?.replace(/\/+$/, '') || 'http://localhost:5000'; #prod
-    // const API_URL = 'http://localhost:5000';
+    const API_URL = process.env.REACT_APP_API_URL?.replace(/\/+$/, '') || 'http://localhost:5000'; //prod
+    // const API_URL = 'http://localhost:5000'; //dev
     
     const response = await axios.post(`${API_URL}/api/claude`, {
       jobDescription: jobDescription
